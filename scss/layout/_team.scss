@@ -55,6 +55,14 @@
           margin-top: 1.5em;
           font-size: 1.8rem;
           color: $secondary;
+
+          .ssi {
+            // background-color: $primary;
+            color: $primary;
+            padding: 0.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
         }
       }
     }

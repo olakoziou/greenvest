@@ -145,6 +145,16 @@ $(function() {
   close.each(function() {
     $(this).click(function() {
       $('.card-opened').css({ opacity: 0, visibility: 'hidden' });
+
+      $(this)
+        .parent()
+        .parent()
+        .removeClass('active');
+
+      $(this)
+        .parent()
+        .parent()
+        .css('display', 'none');
     });
   });
 
@@ -161,9 +171,23 @@ $(function() {
     $('.header__menu-navigation').css('transform', 'scale(0)');
   });
 
-  menuItems.each(function() {
-    $(this).click(function() {
-      $('.header__menu-navigation').css('transform', 'scale(0)');
+  var windowsize = $(window).width();
+  if (windowsize < 1200) {
+    menuItems.each(function() {
+      $(this).click(function() {
+        $('.header__menu-navigation').css('transform', 'scale(0)');
+      });
     });
+  }
+
+  // SCROLL TOP
+
+  $(document).scroll(function() {
+    var scroll = $(this).scrollTop();
+    if (scroll > 100) {
+      $('.scroll-top').fadeIn();
+    } else {
+      $('.scroll-top').fadeOut();
+    }
   });
 });

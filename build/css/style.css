@@ -27,9 +27,29 @@
 1800 - Bid Desktop
 
 */
+.scroll-top {
+  display: none;
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  background-color: rgba(40, 126, 58, 0.8);
+  font-size: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0.75rem 1.8rem rgba(0, 0, 0, 0.55); }
+  .scroll-top a {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
 html {
   font-size: 62.5%;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth; }
   @media (min-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -39,6 +59,9 @@ html {
   @media (min-width: 112.5em) {
     html {
       font-size: 70%; } }
+
+body {
+  position: relative; }
 
 .container {
   max-width: 95vw;
@@ -64,6 +87,9 @@ header {
     header .header__menu-icon {
       align-items: flex-start;
       text-align: right; }
+      @media (min-width: 75em) {
+        header .header__menu-icon {
+          display: none; } }
       header .header__menu-icon i {
         cursor: pointer;
         color: white;
@@ -104,7 +130,8 @@ header {
         @media (min-width: 75em) {
           header .header__menu-navigation ul {
             flex-direction: row;
-            justify-content: right; } }
+            justify-content: flex-end;
+            transform: translateY(0); } }
         header .header__menu-navigation ul li {
           margin: 0.5rem 0;
           position: relative;
@@ -120,7 +147,7 @@ header {
             left: 0;
             width: 1%;
             background-color: #fff;
-            animation: width 0.5s ease-out forwards;
+            animation: width 0.3s ease-out forwards;
             z-index: -1; }
           header .header__menu-navigation ul li a {
             text-decoration: none;
@@ -132,7 +159,8 @@ header {
             padding: 1.5rem 0; }
             @media (min-width: 75em) {
               header .header__menu-navigation ul li a {
-                padding: 0; } }
+                padding: 0 2rem;
+                font-size: 2rem; } }
             header .header__menu-navigation ul li a:hover, header .header__menu-navigation ul li a:active {
               color: #287e3a; }
   header .reading-progress-indicator {
@@ -357,7 +385,8 @@ header {
       margin: 1rem;
       color: #dddddd;
       letter-spacing: 0.4rem;
-      text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.75); }
+      text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.75);
+      text-transform: uppercase; }
     #about .about__content p {
       text-align: center;
       font-size: 2rem;
@@ -412,6 +441,11 @@ header {
     margin-top: 1.5em;
     font-size: 1.8rem;
     color: #3a3a3a; }
+    #team .team__members .copy p .ssi {
+      color: #287e3a;
+      padding: 0.5rem;
+      text-decoration: none;
+      text-transform: uppercase; }
 
 footer {
   background-color: #3a3a3a;
@@ -545,7 +579,8 @@ footer {
             background-color: #1c5629; }
           #slider .slider .slide__items .item .copy .btn.big a {
             text-decoration: none;
-            color: #fff; }
+            color: #fff;
+            cursor: pointer; }
         #slider .slider .slide__items .item.item-1 {
           left: 0vw; }
         #slider .slider .slide__items .item.item-2, #slider .slider .slide__items .item.item-3, #slider .slider .slide__items .item.item-4 {
