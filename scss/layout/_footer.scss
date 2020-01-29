@@ -1,0 +1,63 @@
+footer {
+  background-color: $secondary;
+  color: $grey-1;
+
+  .footer-content {
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond(tab-land) {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    > div:not(:last-child) {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      @include respond(tab-port) {
+        width: 50%;
+      }
+
+      @include respond(tab-land) {
+        width: 25%;
+      }
+    }
+
+    @include respond(tab-port) {
+      display: flex;
+    }
+
+    h5 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    &__work {
+      padding: 0 5rem;
+    }
+
+    &__contact {
+      p {
+        display: inline;
+        &:first-of-type {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    &__copy {
+      width: 100%;
+      .copy {
+        display: inline-block;
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@keyframes textBgc {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes width {
+  to {
+    width: 100%;
+  }
+}

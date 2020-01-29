@@ -1,0 +1,51 @@
+header {
+  @include gradient($primary, $primary-d, 1, 1);
+  overflow: hidden; // hide menu
+
+  .header {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+
+    position: relative;
+    height: 4rem;
+
+    &__logo {
+      &-icon {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &__menu {
+      align-self: center;
+
+      &-icon {
+        align-items: flex-start;
+        text-align: right;
+        cursor: pointer;
+
+        i {
+          color: white;
+          font-size: 1.7rem;
+        }
+      }
+
+      &-navigation {
+        max-width: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: green;
+        top: 0;
+        right: calc(-100% - 2.5vw); // width + container 'margin'
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

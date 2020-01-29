@@ -1,0 +1,143 @@
+header {
+  @include gradient($primary, $primary-l, 1, 1);
+  min-height: max-content;
+  overflow: hidden; // hide menu
+
+  .header {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+
+    // position: relative;
+    height: 6rem;
+
+    &__logo {
+      margin-left: 2.5vw;
+      &-icon {
+        width: 10rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &__menu {
+      // align-self: center;
+      // position: relative;
+
+      &-icon {
+        align-items: flex-start;
+        text-align: right;
+
+        i {
+          cursor: pointer;
+          color: white;
+          font-size: 2rem;
+        }
+      }
+
+      &-navigation {
+        // display: none;
+        max-width: 100%;
+        width: 100vh;
+        height: 100vh;
+        position: fixed;
+        z-index: 999;
+        // top: -100%;
+        // right: -100%;
+        transform: scale(0);
+        transition: all 0.2s;
+        top: 0;
+        right: 0;
+        // left: 0%;
+        // right: calc(-100% - 2.5vw); // width + container 'margin'
+        @include gradient($primary, $primary-l, 1, 1);
+
+        @include respond(tab-land) {
+          transform: scale(1);
+          position: relative;
+          background-color: transparent;
+          height: 100%;
+          width: auto;
+
+          &-icon {
+            display: none;
+          }
+        }
+
+        &-icon {
+          width: 97%;
+          font-size: 2.5rem;
+          text-align: right;
+          color: #fff;
+          transform: translateY(50%);
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transform: translateY(45%);
+
+          @include respond(tab-land) {
+            flex-direction: row;
+            justify-content: right;
+          }
+
+          li {
+            margin: 0.5rem 0;
+
+            position: relative;
+            width: 50vw;
+
+            @include respond(tab-land) {
+              width: auto;
+            }
+
+            &:hover,
+            &:active {
+              &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 1%;
+                background-color: #fff;
+
+                // width: 100%;
+                animation: width 0.5s ease-out forwards;
+                z-index: -1;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: #fff;
+              font-size: 3rem;
+              text-align: center;
+              width: 100%;
+              display: block;
+              padding: 1.5rem 0;
+
+              @include respond(tab-land) {
+                padding: 0;
+              }
+
+              &:hover,
+              &:active {
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .reading-progress-indicator {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    color: $primary;
+  }
+}
