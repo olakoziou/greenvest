@@ -27,25 +27,6 @@
 1800 - Bid Desktop
 
 */
-.scroll-top {
-  display: none;
-  width: 6rem;
-  height: 6rem;
-  position: fixed;
-  right: 5%;
-  bottom: 5%;
-  background-color: rgba(40, 126, 58, 0.8);
-  font-size: 3.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0.75rem 1.8rem rgba(0, 0, 0, 0.55); }
-  .scroll-top a {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-
 html {
   font-size: 62.5%;
   font-family: "Nunito", sans-serif;
@@ -67,6 +48,24 @@ body {
   max-width: 95vw;
   width: 95vw;
   margin: 0 auto; }
+
+.scroll-top {
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  background-color: rgba(40, 126, 58, 0.85);
+  font-size: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0.75rem 1.8rem rgba(0, 0, 0, 0.55); }
+  .scroll-top a {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 header {
   background: #287e3a;

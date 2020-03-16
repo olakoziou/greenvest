@@ -40,11 +40,19 @@
     display: none;
   }
 
+  #card-1 {
+    .card-opened__img-1 {
+      background-image: url(../../img/nieruchomości/mogilska70/20190828_125527.jpg);
+    }
+    .card-opened__img-2 {
+      background-image: url(../img/banner-1.jpg);
+    }
+  }
+
   &__top {
     &-images {
       display: flex;
       > div {
-        background-image: url(../img/banner-1.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -54,10 +62,6 @@
         position: relative;
       }
     }
-    // img {
-    //   width: 100%;
-    //   height: 100%;
-    // }
 
     .close {
       a {
@@ -145,6 +149,37 @@
           }
         }
       }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 1rem;
+    > div {
+      width: 10rem;
+      height: 7rem;
+      margin: 0.3rem;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include boxShadow(xsmall);
+      position: relative;
+
+      @include respond(tab-port) {
+        width: 12rem;
+        height: 9rem;
+        margin: 0.5rem;
+      }
+      @include respond(tab-land) {
+        width: 15rem;
+        height: 12rem;
+        margin: 0.75rem;
+      }
+    }
+    &-img-1 {
+      background-image: url(../../img/nieruchomości/mogilska70/20190828_125527.jpg);
     }
   }
 }
