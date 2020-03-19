@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -269,10 +270,13 @@ header {
         width: 65vw; } }
   .card-opened .cards {
     display: none; }
+  .card-opened #card-1 .card-opened__img-1 {
+    background-image: url(../../img/nieruchomości/mogilska70/20190828_125527.jpg); }
+  .card-opened #card-1 .card-opened__img-2 {
+    background-image: url(../img/banner-1.jpg); }
   .card-opened__top-images {
     display: flex; }
     .card-opened__top-images > div {
-      background-image: url(../img/banner-1.jpg);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -344,6 +348,51 @@ header {
           color: #287e3a;
           display: inline-block;
           width: 1em; }
+  .card-opened__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 1rem; }
+    .card-opened__bottom > div {
+      width: 10rem;
+      height: 7rem;
+      margin: 0.3rem;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.35);
+      position: relative; }
+      .card-opened__bottom > div .close-image a {
+        text-decoration: none;
+        color: #287e3a;
+        font-size: 0.25rem;
+        font-weight: bold;
+        display: block;
+        text-align: right;
+        margin: 0.2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.3);
+        background-color: #fff;
+        border-radius: 50%;
+        width: 0.8rem;
+        height: 0.8rem;
+        text-align: center;
+        display: none; }
+      @media (min-width: 56.25em) {
+        .card-opened__bottom > div {
+          width: 12rem;
+          height: 9rem;
+          margin: 0.5rem; } }
+      @media (min-width: 75em) {
+        .card-opened__bottom > div {
+          width: 15rem;
+          height: 12rem;
+          margin: 0.75rem; } }
+    .card-opened__bottom-img-1 {
+      background-image: url(../../img/nieruchomości/mogilska70/20190828_125527.jpg); }
 
 #about {
   background-image: url(../img/banner-2.jpg);

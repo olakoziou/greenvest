@@ -310,6 +310,43 @@ $(function () {
       $('.scroll-top').fadeOut();
     }
   });
+  // SLIDER CARDS - IMAGE ON HOVER
+  var bottomImages = $('.card-opened__bottom').children();
+  bottomImages.each(function () {
+    $(this).click(function () {
+      $(this).siblings().css({
+        transform: 'scale(1)',
+        position: 'relative',
+        top: '0'
+      });
+      $(this).css({
+        transform: 'scale(4)',
+        position: 'absolute',
+        top: '40%'
+      });
+      $(this).parent().css('justify-content', 'space-around');
+
+      $(this).children().children().css('display', 'block');
+    });
+  });
+
+  // IMAGES IN CARDS
+  var closeImage = $('.close-image');
+
+  btns.each(function () {
+    $(this).click(function () {
+      var elNumb = $(this).attr('id').slice(-1);
+      $('.card-opened').css({ opacity: 1, visibility: 'visible' });
+      $('#card-' + elNumb).addClass('active');
+      $('#card-' + elNumb).css('display', 'block');
+    });
+  });
+
+  closeImage.each(function () {
+    $(this).click(function () {
+      console.log('x');
+    });
+  });
 });
 
 /***/ }),

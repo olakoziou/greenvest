@@ -38,14 +38,68 @@
   }
   .cards {
     display: none;
+
+    .card-opened__bottom-img_opened {
+      position: absolute;
+      width: 75%;
+      height: 45%;
+      top: 25%;
+      left: 25%;
+      transform: translate(-15%, -15%);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: none;
+      @include boxShadow(medium);
+
+      .close-image {
+        a {
+          text-decoration: none;
+          color: $primary;
+          font-size: 1.6rem;
+          font-weight: bold;
+          display: block;
+          text-align: right;
+          margin: 0.2rem;
+          cursor: pointer;
+          position: absolute;
+
+          top: 0;
+          right: 0;
+          text-shadow: 0 1rem 1rem rgba(#fff, 0.3);
+          border-radius: 50%;
+          width: 2rem;
+          height: 2rem;
+          text-align: center;
+
+          @include respond(tab-port) {
+            font-size: 2.4rem;
+            margin: 0.8rem;
+          }
+        }
+      }
+
+      @include respond(tab-port) {
+        height: 65%;
+      }
+    }
   }
 
   #card-1 {
     .card-opened__img-1 {
-      background-image: url(../../img/nieruchomości/mogilska70/20190828_125527.jpg);
+      background-image: url(../../img/nieruchomości/mogilska70/rsz_20190828_125527.jpg);
     }
     .card-opened__img-2 {
-      background-image: url(../img/banner-1.jpg);
+      background-image: url(../../img/nieruchomości/mogilska70/LEH_6910.jpg);
+    }
+  }
+
+  #card-2 {
+    .card-opened__img-1 {
+      background-image: url(../../img/nieruchomości/dluga17/20190828_131426.jpg);
+    }
+    .card-opened__img-2 {
+      background-image: url(../../img/nieruchomości/dluga17/LEH_6885.jpg);
     }
   }
 
@@ -79,15 +133,10 @@
         top: 0;
         right: 0;
         text-shadow: 0 1rem 1rem rgba(#fff, 0.3);
-        background-color: #fff;
         border-radius: 50%;
         width: 2.5rem;
         height: 2.5rem;
         text-align: center;
-
-        i {
-          transform: translate(5%, -8%);
-        }
       }
     }
   }
@@ -157,6 +206,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 1rem;
+
     > div {
       width: 10rem;
       height: 7rem;
@@ -178,8 +228,39 @@
         margin: 0.75rem;
       }
     }
-    &-img-1 {
+
+    // card-1
+    #card-1 &-img-1 {
       background-image: url(../../img/nieruchomości/mogilska70/20190828_125527.jpg);
+    }
+    #card-1 &-img-2 {
+      background-image: url(../../img/nieruchomości/mogilska70/20190828_125930.jpg);
+    }
+    #card-1 &-img-3 {
+      background-image: url(../../img/nieruchomości/mogilska70/LEH_6910.jpg);
+    }
+    #card-1 &-img-4 {
+      background-image: url(../../img/nieruchomości/mogilska70/LEH_6914.jpg);
+    }
+    #card-1 &-img-5 {
+      background-image: url(../../img/nieruchomości/mogilska70/LEH_6940.jpg);
+    }
+
+    // card-2
+    #card-2 &-img-1 {
+      background-image: url(../../img/nieruchomości/dluga17/20190828_131426.jpg);
+    }
+    #card-2 &-img-2 {
+      background-image: url(../../img/nieruchomości/dluga17/20191025_130648.jpg);
+    }
+    #card-2 &-img-3 {
+      background-image: url(../../img/nieruchomości/dluga17/LEH_6863.jpg);
+    }
+    #card-2 &-img-4 {
+      background-image: url(../../img/nieruchomości/dluga17/LEH_6870.jpg);
+    }
+    #card-2 &-img-5 {
+      background-image: url(../../img/nieruchomości/dluga17/LEH_6885.jpg);
     }
   }
 }

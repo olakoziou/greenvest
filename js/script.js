@@ -190,4 +190,26 @@ $(function() {
       $('.scroll-top').fadeOut();
     }
   });
+  // SLIDER CARDS - IMAGE ON CLICK
+  const bottomImages = $('.card-opened__bottom').children();
+  const bottomImagesOpened = $('.card-opened__bottom-img_opened');
+  const closeImage = $('.close-image');
+
+  bottomImages.each(function() {
+    $(this).click(function() {
+      const bg = $(this).css('background-image');
+
+      bottomImagesOpened.css('background-image', bg);
+      bottomImagesOpened.fadeIn();
+    });
+  });
+
+  closeImage.each(function() {
+    $(this).click(function() {
+      $(this)
+        .parent()
+        .fadeOut('fast');
+      bottomImagesOpened.css('background-image', '');
+    });
+  });
 });

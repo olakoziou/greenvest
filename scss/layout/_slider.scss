@@ -86,11 +86,22 @@
         }
 
         .img {
-          background-image: url(https://source.unsplash.com/daily);
           height: 200px;
           width: 100%;
           background-position: center;
           background-size: cover;
+        }
+
+        #img-1 {
+          background-image: url(../../img/nieruchomości/mogilska70/LEH_6910.jpg);
+        }
+
+        #img-2 {
+          background-image: url(../../img/nieruchomości/dluga17/LEH_6863.jpg);
+        }
+
+        #img-3 {
+          background-image: url(../../img/nieruchomości/dluga17/LEH_6863.jpg);
         }
 
         .copy {

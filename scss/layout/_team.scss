@@ -20,11 +20,18 @@
         border: 3px solid $primary;
         overflow: hidden;
         margin: 0 auto;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         @include boxShadow(xsmall);
-        img {
-          width: 100%;
-          height: 100%;
-        }
+      }
+
+      .img#img-1 {
+        background-image: url(../../img/team/001.jpg);
+      }
+
+      .img#img-2 {
+        background-image: url(../../img/team/002.jpg);
       }
 
       .copy {
