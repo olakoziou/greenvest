@@ -114,19 +114,6 @@ $(function() {
     }
   }
 
-  //change slide after clicking dot + set class
-  dots.each(function(e) {
-    $(this).click(function() {
-      dots.removeClass('active');
-      slides.eq(x).css('left', '-100vw');
-      slides.eq(e).css('left', '0vw');
-      x = e;
-      if (!$(this).hasClass('active')) {
-        $(this).addClass('active');
-      }
-    });
-  });
-
   // CARDS OPEN
   const btns = $('.btn');
   const close = $('.close');
@@ -155,6 +142,18 @@ $(function() {
         .parent()
         .parent()
         .css('display', 'none');
+
+      $(this)
+        .parent()
+        .siblings()
+        .last()
+        .css('background-image', '');
+
+      $(this)
+        .parent()
+        .siblings()
+        .last()
+        .fadeOut();
     });
   });
 
@@ -181,7 +180,7 @@ $(function() {
   }
 
   // SCROLL TOP
-
+  $('.scroll-top').css('display', 'none');
   $(document).scroll(function() {
     var scroll = $(this).scrollTop();
     if (scroll > 100) {
@@ -192,11 +191,15 @@ $(function() {
   });
   // SLIDER CARDS - IMAGE ON CLICK
   const bottomImages = $('.card-opened__bottom').children();
-  const bottomImagesOpened = $('.card-opened__bottom-img_opened');
   const closeImage = $('.close-image');
 
   bottomImages.each(function() {
     $(this).click(function() {
+      const bottomImagesOpened = $(this)
+        .parent()
+        .siblings()
+        .last();
+      console.log(this);
       const bg = $(this).css('background-image');
 
       bottomImagesOpened.css('background-image', bg);

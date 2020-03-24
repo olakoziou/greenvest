@@ -93,21 +93,21 @@
         }
 
         #img-1 {
-          background-image: url(../../img/nieruchomości/mogilska70/LEH_6910.jpg);
+          background-image: url(../../build/img/nieruchomości/mogilska70/LEH_6910.webp);
         }
 
         #img-2 {
-          background-image: url(../../img/nieruchomości/dluga17/LEH_6863.jpg);
+          background-image: url(../../build/img/nieruchomości/dluga17/LEH_6863.webp);
         }
 
         #img-3 {
-          background-image: url(../../img/nieruchomości/dluga17/LEH_6863.jpg);
+          background-image: url(../../build/img/nieruchomości/biezanowska97/20190823_143557.webp);
         }
 
         .copy {
           h4 {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.7rem;
             color: $secondary;
             text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
           }
@@ -158,32 +158,18 @@
   }
 
   i:nth-of-type(2) {
-    right: 0;
+    right: -3rem;
+
+    @include respond(tab-port) {
+      right: 0;
+    }
   }
 
   i:nth-of-type(1) {
-    left: 0;
-  }
+    left: -3rem;
 
-  .dots {
-    display: flex;
-    // width: 80vw;
-    margin: 6rem auto 3rem;
-    justify-content: center;
-
-    .dot {
-      width: 1rem;
-      height: 1rem;
-      background-color: $grey-3;
-      border-radius: 50%;
-      margin: 0.6rem;
-      transition: all 0.2s;
-      cursor: pointer;
-
-      &:hover,
-      &.active {
-        background-color: $primary-d;
-      }
+    @include respond(tab-port) {
+      left: 0;
     }
   }
 }

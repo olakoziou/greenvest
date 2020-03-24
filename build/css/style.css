@@ -32,22 +32,22 @@ html {
   font-size: 62.5%;
   font-family: "Nunito", sans-serif;
   scroll-behavior: smooth; }
+  @media (min-width: 56.25em) {
+    html {
+      font-size: 63%; } }
   @media (min-width: 75em) {
     html {
-      font-size: 56.25%; } }
+      font-size: 65%; } }
   @media (min-width: 90.63em) {
     html {
-      font-size: 60%; } }
-  @media (min-width: 112.5em) {
-    html {
-      font-size: 70%; } }
+      font-size: 67%; } }
 
 body {
   position: relative; }
 
 .container {
-  max-width: 95vw;
-  width: 95vw;
+  max-width: 90vw;
+  width: 90vw;
   margin: 0 auto; }
 
 .scroll-top {
@@ -171,7 +171,7 @@ header {
     color: #287e3a; }
 
 .banner {
-  background-image: url(../img/banner-1.jpg);
+  background-image: url(../../build/img/banner-1.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -250,6 +250,8 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: all 0.25s 0.25s; }
+  .card-opened > div {
+    max-height: 100vh; }
   .card-opened .active {
     display: table;
     background-color: #fff;
@@ -270,10 +272,54 @@ header {
         width: 65vw; } }
   .card-opened .cards {
     display: none; }
+    .card-opened .cards .card-opened__bottom-img_opened {
+      position: absolute;
+      width: 75%;
+      height: 45%;
+      top: 25%;
+      left: 25%;
+      transform: translate(-15%, -15%);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: none;
+      box-shadow: 0 0.2rem 2.2rem rgba(0, 0, 0, 0.75); }
+      .card-opened .cards .card-opened__bottom-img_opened .close-image a {
+        text-decoration: none;
+        color: #287e3a;
+        font-size: 2.2rem;
+        font-weight: bold;
+        display: block;
+        text-align: right;
+        margin: 0.4rem;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        text-align: center; }
+        @media (min-width: 56.25em) {
+          .card-opened .cards .card-opened__bottom-img_opened .close-image a {
+            font-size: 2.4rem;
+            margin: 0.8rem; } }
+      @media (min-width: 56.25em) {
+        .card-opened .cards .card-opened__bottom-img_opened {
+          height: 65%; } }
   .card-opened #card-1 .card-opened__img-1 {
-    background-image: url(../../img/nieruchomości/mogilska70/20190828_125527.jpg); }
+    background-image: url(../../build/img/nieruchomości/mogilska70/20190828_125527.webp); }
   .card-opened #card-1 .card-opened__img-2 {
-    background-image: url(../img/banner-1.jpg); }
+    background-image: url(../../build/img/nieruchomości/mogilska70/LEH_6910.webp); }
+  .card-opened #card-2 .card-opened__img-1 {
+    background-image: url(../../build/img/nieruchomości/dluga17/20190828_131426.webp); }
+  .card-opened #card-2 .card-opened__img-2 {
+    background-image: url(../../build/img/nieruchomości/dluga17/LEH_6885.webp); }
+  .card-opened #card-3 .card-opened__img-1 {
+    background-image: url(../../build/img/nieruchomości/biezanowska97/20190807_140351.webp); }
+  .card-opened #card-3 .card-opened__img-2 {
+    background-image: url(../../build/img/nieruchomości/biezanowska97/20190823_143557.webp); }
   .card-opened__top-images {
     display: flex; }
     .card-opened__top-images > div {
@@ -281,13 +327,16 @@ header {
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
-      height: 25rem;
+      height: 15rem;
       box-shadow: 0 0.75rem 1.8rem rgba(0, 0, 0, 0.55);
       position: relative; }
+      @media (min-width: 31.25em) {
+        .card-opened__top-images > div {
+          height: 25rem; } }
   .card-opened__top .close a {
     text-decoration: none;
     color: #287e3a;
-    font-size: 2rem;
+    font-size: 2.8rem;
     font-weight: bold;
     display: block;
     text-align: right;
@@ -299,16 +348,13 @@ header {
     top: 0;
     right: 0;
     text-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.3);
-    background-color: #fff;
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
     text-align: center; }
-    .card-opened__top .close a i {
-      transform: translate(5%, -8%); }
   .card-opened h4 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #3a3a3a;
     text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
     margin: 1.5rem;
@@ -362,25 +408,6 @@ header {
       background-repeat: no-repeat;
       box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.35);
       position: relative; }
-      .card-opened__bottom > div .close-image a {
-        text-decoration: none;
-        color: #287e3a;
-        font-size: 0.25rem;
-        font-weight: bold;
-        display: block;
-        text-align: right;
-        margin: 0.2rem;
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        right: 0;
-        text-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.3);
-        background-color: #fff;
-        border-radius: 50%;
-        width: 0.8rem;
-        height: 0.8rem;
-        text-align: center;
-        display: none; }
       @media (min-width: 56.25em) {
         .card-opened__bottom > div {
           width: 12rem;
@@ -391,11 +418,33 @@ header {
           width: 15rem;
           height: 12rem;
           margin: 0.75rem; } }
-    .card-opened__bottom-img-1 {
-      background-image: url(../../img/nieruchomości/mogilska70/20190828_125527.jpg); }
+    #card-1 .card-opened__bottom-img-1 {
+      background-image: url(../../build/img/nieruchomości/mogilska70/20190828_125527.webp); }
+    #card-1 .card-opened__bottom-img-2 {
+      background-image: url(../../build/img/nieruchomości/mogilska70/20190828_125930.webp); }
+    #card-1 .card-opened__bottom-img-3 {
+      background-image: url(../../build/img/nieruchomości/mogilska70/LEH_6910.webp); }
+    #card-1 .card-opened__bottom-img-4 {
+      background-image: url(../../build/img/nieruchomości/mogilska70/LEH_6914.webp); }
+    #card-1 .card-opened__bottom-img-5 {
+      background-image: url(../../build/img/nieruchomości/mogilska70/LEH_6940.webp); }
+    #card-2 .card-opened__bottom-img-1 {
+      background-image: url(../../build/img/nieruchomości/dluga17/20190828_131426.webp); }
+    #card-2 .card-opened__bottom-img-2 {
+      background-image: url(../../build/img/nieruchomości/dluga17/LEH_6885.webp); }
+    #card-2 .card-opened__bottom-img-3 {
+      background-image: url(../../build/img/nieruchomości/dluga17/LEH_6863.webp); }
+    #card-2 .card-opened__bottom-img-4 {
+      background-image: url(../../build/img/nieruchomości/dluga17/LEH_6870.webp); }
+    #card-3 .card-opened__bottom-img-1 {
+      background-image: url(../../build/img/nieruchomości/biezanowska97/20190807_140351.webp); }
+    #card-3 .card-opened__bottom-img-2 {
+      background-image: url(../../build/img/nieruchomości/biezanowska97/20190823_143557.webp); }
+    #card-3 .card-opened__bottom-img-3 {
+      background-image: url(../../build/img/nieruchomości/biezanowska97/20190823_143715.webp); }
 
 #about {
-  background-image: url(../img/banner-2.jpg);
+  background-image: url(../../build/img/banner-2.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -443,6 +492,28 @@ header {
       color: #dddddd;
       text-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.5); }
 
+#team .team h4 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #3a3a3a;
+  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
+  margin: 3rem;
+  position: relative; }
+  #team .team h4.slider__title {
+    margin: 4rem; }
+  #team .team h4 span {
+    display: inline-block;
+    height: 100%;
+    background-color: #3a3a3a;
+    padding: 0.2em;
+    margin: 0.2em;
+    color: #fff;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+    letter-spacing: 0.07rem;
+    box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.35); }
+
 @media (min-width: 56.25em) {
   #team .team {
     margin-top: 6rem; } }
@@ -450,9 +521,34 @@ header {
 #team .team__members div[class*='team__members-'] {
   padding-bottom: 5rem; }
 
+#team .team__members-top {
+  display: flex;
+  flex-direction: column; }
+  #team .team__members-top > div {
+    margin: 0 auto; }
+    @media (min-width: 75em) {
+      #team .team__members-top > div {
+        max-width: 50%; } }
+  @media (min-width: 75em) {
+    #team .team__members-top {
+      flex-direction: row; } }
+
+#team .team__members-bottom {
+  display: flex;
+  flex-direction: column; }
+  #team .team__members-bottom > div {
+    margin: 0 auto; }
+    @media (min-width: 75em) {
+      #team .team__members-bottom > div {
+        max-width: calc(100% / 3); } }
+  @media (min-width: 75em) {
+    #team .team__members-bottom {
+      flex-direction: row; } }
+
 @media (min-width: 75em) {
   #team .team__members {
-    display: flex; } }
+    display: flex;
+    flex-direction: column; } }
 
 #team .team__members .img {
   width: 20rem;
@@ -461,10 +557,25 @@ header {
   border: 3px solid #287e3a;
   overflow: hidden;
   margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.35); }
-  #team .team__members .img img {
-    width: 100%;
-    height: 100%; }
+
+#team .team__members .img#team_img-1 {
+  background-image: url(../../build/img/team/kkoziol.webp); }
+
+#team .team__members .img#team_img-2 {
+  background-image: url(../../build/img/team/wurbanczyk.webp); }
+
+#team .team__members .img#team_img-3 {
+  background-image: url(../../build/img/team/mkubiela.webp); }
+
+#team .team__members .img#team_img-4 {
+  background-image: url(../../build/img/team/sjakubik.webp); }
+
+#team .team__members .img#team_img-5 {
+  background-image: url(../../build/img/team/dmuzyk.webp); }
 
 #team .team__members .copy {
   text-align: center;
@@ -601,14 +712,19 @@ footer {
           #slider .slider .slide__items .item {
             max-width: 300px; } }
         #slider .slider .slide__items .item .img {
-          background-image: url(https://source.unsplash.com/daily);
           height: 200px;
           width: 100%;
           background-position: center;
           background-size: cover; }
+        #slider .slider .slide__items .item #img-1 {
+          background-image: url(../../build/img/nieruchomości/mogilska70/LEH_6910.webp); }
+        #slider .slider .slide__items .item #img-2 {
+          background-image: url(../../build/img/nieruchomości/dluga17/LEH_6863.webp); }
+        #slider .slider .slide__items .item #img-3 {
+          background-image: url(../../build/img/nieruchomości/biezanowska97/20190823_143557.webp); }
         #slider .slider .slide__items .item .copy h4 {
           text-align: center;
-          font-size: 2rem;
+          font-size: 1.7rem;
           color: #3a3a3a;
           text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25); }
         #slider .slider .slide__items .item .copy .btn.big {
@@ -648,20 +764,12 @@ footer {
     font-size: 3.5rem;
     color: #3a3a3a; }
   #slider i:nth-of-type(2) {
-    right: 0; }
+    right: -3rem; }
+    @media (min-width: 56.25em) {
+      #slider i:nth-of-type(2) {
+        right: 0; } }
   #slider i:nth-of-type(1) {
-    left: 0; }
-  #slider .dots {
-    display: flex;
-    margin: 6rem auto 3rem;
-    justify-content: center; }
-    #slider .dots .dot {
-      width: 1rem;
-      height: 1rem;
-      background-color: #b1b1b1;
-      border-radius: 50%;
-      margin: 0.6rem;
-      transition: all 0.2s;
-      cursor: pointer; }
-      #slider .dots .dot:hover, #slider .dots .dot.active {
-        background-color: #226932; }
+    left: -3rem; }
+    @media (min-width: 56.25em) {
+      #slider i:nth-of-type(1) {
+        left: 0; } }

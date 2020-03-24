@@ -242,19 +242,6 @@ $(function () {
     }
   }
 
-  //change slide after clicking dot + set class
-  dots.each(function (e) {
-    $(this).click(function () {
-      dots.removeClass('active');
-      slides.eq(x).css('left', '-100vw');
-      slides.eq(e).css('left', '0vw');
-      x = e;
-      if (!$(this).hasClass('active')) {
-        $(this).addClass('active');
-      }
-    });
-  });
-
   // CARDS OPEN
   var btns = $('.btn');
   var close = $('.close');
@@ -275,6 +262,10 @@ $(function () {
       $(this).parent().parent().removeClass('active');
 
       $(this).parent().parent().css('display', 'none');
+
+      $(this).parent().siblings().last().css('background-image', '');
+
+      $(this).parent().siblings().last().fadeOut();
     });
   });
 
@@ -301,7 +292,7 @@ $(function () {
   }
 
   // SCROLL TOP
-
+  $('.scroll-top').css('display', 'none');
   $(document).scroll(function () {
     var scroll = $(this).scrollTop();
     if (scroll > 100) {
@@ -310,41 +301,25 @@ $(function () {
       $('.scroll-top').fadeOut();
     }
   });
-  // SLIDER CARDS - IMAGE ON HOVER
+  // SLIDER CARDS - IMAGE ON CLICK
   var bottomImages = $('.card-opened__bottom').children();
-  bottomImages.each(function () {
-    $(this).click(function () {
-      $(this).siblings().css({
-        transform: 'scale(1)',
-        position: 'relative',
-        top: '0'
-      });
-      $(this).css({
-        transform: 'scale(4)',
-        position: 'absolute',
-        top: '40%'
-      });
-      $(this).parent().css('justify-content', 'space-around');
-
-      $(this).children().children().css('display', 'block');
-    });
-  });
-
-  // IMAGES IN CARDS
   var closeImage = $('.close-image');
 
-  btns.each(function () {
+  bottomImages.each(function () {
     $(this).click(function () {
-      var elNumb = $(this).attr('id').slice(-1);
-      $('.card-opened').css({ opacity: 1, visibility: 'visible' });
-      $('#card-' + elNumb).addClass('active');
-      $('#card-' + elNumb).css('display', 'block');
+      var bottomImagesOpened = $(this).parent().siblings().last();
+      console.log(this);
+      var bg = $(this).css('background-image');
+
+      bottomImagesOpened.css('background-image', bg);
+      bottomImagesOpened.fadeIn();
     });
   });
 
   closeImage.each(function () {
     $(this).click(function () {
-      console.log('x');
+      $(this).parent().fadeOut('fast');
+      bottomImagesOpened.css('background-image', '');
     });
   });
 });

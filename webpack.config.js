@@ -8,7 +8,7 @@ module.exports = {
     publicPath: '/build',
     filename: 'bundle.js'
   },
-  plugins: [new CopyPlugin([{ from: './img', to: 'build/img' }])],
+  plugins: [new CopyPlugin([{ from: './img', to: 'img' }])],
   watch: true,
   mode: 'development',
   devtool: 'source-map',

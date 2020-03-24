@@ -1,6 +1,33 @@
 #team {
   @extend %sectionPad;
   .team {
+    h4 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: $secondary;
+      text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
+      margin: 3rem;
+      position: relative;
+
+      &.slider__title {
+        margin: 4rem;
+      }
+
+      span {
+        display: inline-block;
+        height: 100%;
+        background-color: $secondary;
+        padding: 0.2em;
+        margin: 0.2em;
+        color: #fff;
+        right: 0;
+        bottom: 0;
+        z-index: -10;
+        letter-spacing: 0.07rem;
+
+        @include boxShadow(xsmall);
+      }
+    }
     @include respond(tab-port) {
       margin-top: 6rem;
     }
@@ -9,8 +36,38 @@
         padding-bottom: 5rem;
       }
 
+      &-top {
+        display: flex;
+        flex-direction: column;
+        > div {
+          margin: 0 auto;
+          @include respond(tab-land) {
+            max-width: 50%;
+          }
+        }
+
+        @include respond(tab-land) {
+          flex-direction: row;
+        }
+      }
+      &-bottom {
+        display: flex;
+        flex-direction: column;
+        > div {
+          margin: 0 auto;
+          @include respond(tab-land) {
+            max-width: calc(100% / 3);
+          }
+        }
+
+        @include respond(tab-land) {
+          flex-direction: row;
+        }
+      }
+
       @include respond(tab-land) {
         display: flex;
+        flex-direction: column;
       }
 
       .img {
@@ -26,12 +83,24 @@
         @include boxShadow(xsmall);
       }
 
-      .img#img-1 {
-        background-image: url(../../img/team/001.jpg);
+      .img#team_img-1 {
+        background-image: url(../../build/img/team/kkoziol.webp);
       }
 
-      .img#img-2 {
-        background-image: url(../../img/team/002.jpg);
+      .img#team_img-2 {
+        background-image: url(../../build/img/team/wurbanczyk.webp);
+      }
+
+      .img#team_img-3 {
+        background-image: url(../../build/img/team/mkubiela.webp);
+      }
+
+      .img#team_img-4 {
+        background-image: url(../../build/img/team/sjakubik.webp);
+      }
+
+      .img#team_img-5 {
+        background-image: url(../../build/img/team/dmuzyk.webp);
       }
 
       .copy {

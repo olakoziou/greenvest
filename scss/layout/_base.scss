@@ -3,22 +3,21 @@ html {
   font-family: $font-main;
   scroll-behavior: smooth;
 
-  // @include respond(tab-port) {
-  //   // width < 600px
-  //   font-size: 58%; // 1rem = 8px (I want 1rem to be 8px)
-  // }
+  @include respond(tab-port) {
+    font-size: 63%;
+  }
+
   @include respond(tab-land) {
-    // width < 900px
-    font-size: 56.25%; // 1rem = 9px >> 9/16 = 56,25%; OREDER IS IMPORTANT - THE LAST ONE IS EXECUTED
+    font-size: 65%;
   }
 
   @include respond(popup) {
-    font-size: 60%; // 1rem = 12px
+    font-size: 67%;
   }
 
-  @include respond(big-desktop) {
-    font-size: 70%; // 1rem = 12px
-  }
+  // @include respond(big-desktop) {
+  //   font-size: 70%;
+  // }
 }
 
 body {
@@ -26,9 +25,7 @@ body {
 }
 
 .container {
-  max-width: 95vw;
-  width: 95vw;
+  max-width: 90vw;
+  width: 90vw;
   margin: 0 auto;
-
-  //background-color: rgb(185, 185, 185);
 }
